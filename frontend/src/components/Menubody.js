@@ -21,7 +21,7 @@ const Menubody = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/products');
+      const response = await axios.get('https://backend-anji.onrender.com/products');
       if (response) {
         const uniqueCategories = new Set(category);
         response.data.products.forEach((item) => uniqueCategories.add(item.category));
