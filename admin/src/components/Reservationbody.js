@@ -6,7 +6,7 @@ const Reservationbody = () => {
 
   const fetchreservation = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/reservations/display')
+      const response = await axios.get('https://backend-anji.onrender.com/reservations/display')
       if (response) {
         setreservations(response.data.reservation)
       }
@@ -17,7 +17,7 @@ const Reservationbody = () => {
 
   const HandleCancel = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:4000/reservation/cancel/${id}`)
+      const response = await axios.delete(`https://backend-anji.onrender.com/reservation/cancel/${id}`)
       if (response) {
         setreservations(reservations.filter((item) => item._id !== id))
       }
