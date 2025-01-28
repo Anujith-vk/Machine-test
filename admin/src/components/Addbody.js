@@ -23,7 +23,7 @@ const Addbody = () => {
       const { category, name, description, price } = data;
       if (!category || !name || !description || !price) {
       } else {
-        const response = await axios.post('http://localhost:4000/addproduct', { category, name, description, price });
+        const response = await axios.post('https://backend-anji.onrender.com/addproduct', { category, name, description, price });
         if (response) {
           toast.success("Product added Successfully", { autoClose: 1500 })
           setuploading(false)
