@@ -23,7 +23,7 @@ const Reservationbody = () => {
       if (!name || !number || !email || !date) {
         toast.error('Please provide all the fields', { autoClose: 800 });
       } else {
-        const response = await axios.post('http://localhost:4000/table/reservation', { name, email, number, date });
+        const response = await axios.post('https://backend-anji.onrender.com/table/reservation', { name, email, number, date });
         if (response) {
           toast.success(response.data.message, { autoClose: 800 });
           setdata({
